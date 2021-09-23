@@ -13,6 +13,7 @@ def send_welcome(message):
 
 # function for getting messages of user send
 @bot.message_handler(func=lambda msg: msg.text is not None)
+
 def translit(message):
     msg = message.text
     message_answer = lambda msg: to_cyrillic(msg) if msg.isascii() else to_latin(msg)
